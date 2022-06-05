@@ -13,7 +13,7 @@ export default class PixabeyService {
   }
   async fetchGallery() {
     const response = await axios.get(
-      `${BASE_URL}?key=${KEY}&q=${this.searchQuery}+flowers&image_type=photo&page=${this.page}&per_page=${this.per_page}`,
+      `${BASE_URL}?key=${KEY}&q=${this.searchQuery}&image_type=photo&page=${this.page}&per_page=${this.per_page}`,
     );
 
     if (this.page === 1 && response.data.totalHits !== 0) {
